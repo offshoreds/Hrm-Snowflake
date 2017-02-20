@@ -22,8 +22,8 @@
     type: single_value
     model: Human_Resource_Management
     explore: new_hire_trend
-    measures: [new_hire_trend.new_hires_ytd_m]
-    sorts: [new_hire_trend.new_hires_ytd_m desc]
+    measures: [new_hire_trend.new_hires_ytd_m_nl]
+    sorts: [new_hire_trend.new_hires_ytd_m_nl desc]
     limit: '500'
     column_limit: '50'
     query_timezone: America/Los_Angeles

@@ -25,8 +25,8 @@
     type: single_value
     explore: headcount
     model: Human_Resource_Management
-    measures: [headcount.Contingent_emp]
-    sorts: [headcount.Contingent_emp desc]
+    measures: [headcount.Contingent_emp_nl]
+    sorts: [headcount.Contingent_emp_nl desc]
     limit: '500'
     column_limit: '50'
     query_timezone: America/Los_Angeles
@@ -71,8 +71,8 @@
     type: single_value
     model: Human_Resource_Management
     explore: headcount
-    measures: [headcount.Employees_Sum]
-    sorts: [headcount.Employees_Sum desc]
+    measures: [headcount.Employees_Sum_nl]
+    sorts: [headcount.Employees_Sum_nl desc]
     limit: '500'
     column_limit: '50'
     query_timezone: America/Los_Angeles
