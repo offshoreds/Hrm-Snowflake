@@ -9,52 +9,100 @@ include: "*.dashboard"
 label: "HRM"
 
 
-explore: headcount {}
+explore: headcount {
+  label: "Headcount"
+}
 
 explore: supervisorreport {
   label: "Supervisor"
 }
 
-explore: employees_trend {}
+explore: employees_trend {
+  view_label: "Employess"
+}
 
-explore: payroll {}
+explore: payroll {
+  label: "Payroll"
+}
 
-explore: requisition_events {}
+explore: requisition_events {
+  label: "Requisition Events"
+}
 
-explore: recruitment_events {}
+explore: recruitment_events {
+  label: "Recruitment Events"
 
-explore: new_hire_trend {}
+}
 
-explore: open_requisition {}
+explore: new_hire_trend {
+  label: " Hires"
+}
 
-explore: top5_vacancies {}
+explore: open_requisition {
+  label: "Open Requisition"
+}
 
-explore: recruitment_stage {}
+explore: top5_vacancies {
+  label: "Top Five"
+}
 
-explore: vacancy_fill_rate {}
+explore: recruitment_stage {
+  label: "Recruitment Stage"
+}
 
-explore: vacancy_rate {}
+explore: vacancy_fill_rate {
+  label: "Vacancy Fill Rate"
+}
 
-explore: new_hire_retention {}
+explore: vacancy_rate {
+  label: "Vacancy Rate"
+}
 
-explore: new_hire_source {}
+explore: new_hire_retention {
+  label: "New Hire Retention"
+}
 
-explore: new_hire_view {}
+explore: new_hire_source {
+  label: "New Hire Source"
+}
 
-explore: threeyears_saltrend {}
+explore: new_hire_view {
+  label: "New Hire View"
+}
 
-explore: salary_compression {}
+explore: threeyears_saltrend {
+  label: "Three Years"
+}
 
-explore: performance_base {}
+explore: salary_compression {
+  label: "Salary Compression"
+}
 
-explore: top_cost_centers {}
+explore: performance_base {
+  label: "Performance Base"
+}
 
-explore: expenses_category {}
+explore: top_cost_centers {
+  label: "Top Cost Centers"
+}
 
-explore: top_spenders {}
+explore: expenses_category {
+  label: "Expenses Category"
+}
 
-explore: expenses_by_time_period {}
+explore: top_spenders {
+  label: "Top Spenders"
+}
 
-explore: recent_emp {}
+explore: expenses_by_time_period {
+  label: "Expenses By Time Period"
+}
 
-explore: expenses_by_day {}
+explore: recent_emp {
+  label: "Recent Emp"
+
+}
+
+explore: expenses_by_day {
+  label: "Expenses By Day"
+}

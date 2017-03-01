@@ -2,16 +2,19 @@ view: new_hire_retention {
   sql_table_name: public.NEW_HIRE_RETENTION ;;
 
   dimension: applicant_hires {
+    hidden: yes
     type: string
     sql: ${TABLE}.APPLICANT_HIRES ;;
   }
 
   dimension: employee_separations {
+    hidden: yes
     type: string
     sql: ${TABLE}.EMPLOYEE_SEPARATIONS ;;
   }
 
   dimension: first_service {
+    hidden: yes
     type: string
     sql: ${TABLE}.FIRST_SERVICE ;;
   }

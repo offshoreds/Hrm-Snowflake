@@ -2,11 +2,13 @@ view: payroll {
   sql_table_name: public.PAYROLL ;;
 
   dimension: overtime_expense {
+    hidden: yes
     type: string
     sql: ${TABLE}.OVERTIME_EXPENSE ;;
   }
 
   dimension: payroll_expense {
+    hidden: yes
     type: string
     sql: ${TABLE}.PAYROLL_EXPENSE ;;
   }
@@ -17,6 +19,7 @@ view: payroll {
   }
 
   dimension: support_expense {
+    hidden: yes
     type: string
     sql: ${TABLE}.SUPPORT_EXPENSE ;;
   }
@@ -27,22 +30,18 @@ view: payroll {
   }
 
   dimension: Total_Payroll {
+    hidden: yes
     type: string
     sql: ${TABLE}.TOTAL_PAYROLL ;;
   }
 
   dimension: Previous_Payroll {
+    hidden: yes
     type: string
     sql: ${TABLE}.PREVIOUS_PAYROLL ;;
   }
 
-  # mearures
-
-  # - measure: overtime
-  #  label: 'Overtime Expenses'
-  #  type: sum
-  #  value_format: '$#,##0'
-  #  sql: ${overtime_expense}/10000
+  # measures
 
 
   measure: payroll_2015 {
@@ -65,26 +64,10 @@ view: payroll {
 
     link: {
       label: "Employee Expenses details"
-      url: "/dashboards/39"
+      url: "/dashboards/hrm::employee_expenses"
     }
   }
 
-  #  - measure: payroll_M
-  #    label: 'Payroll Expenses'
-  #    value_format: '$#,##0'
-  #    type: sum
-  #    sql: ${payroll_expense}/1000
-  #    links:
-  #    - label: Employee Expenses details
-  #      url: /dashboards/39
-
-
-
-  #  - measure: support
-  #    type: sum
-  #    value_format: '$#,##0'
-  #    label: 'Support Expenses'
-  #    sql: ${support_expense}*1000
 
   measure: count {
     type: count

@@ -2,6 +2,7 @@ view: top_cost_centers {
   sql_table_name: public.TOP_COST_CENTERS ;;
 
   dimension: cost_center_number {
+    hidden: yes
     type: string
     sql: ${TABLE}.COST_CENTER_NUMBER ;;
   }
@@ -12,6 +13,7 @@ view: top_cost_centers {
   }
 
   dimension: total_expenses_year_ago {
+    hidden: yes
     type: string
     sql: ${TABLE}.TOTAL_EXPENSES_YEAR_AGO ;;
   }
@@ -23,6 +25,7 @@ view: top_cost_centers {
 
   dimension: total_expenses_new {
     type: string
+    hidden: yes
     sql: ${TABLE}.TOTAL_EXPENSES_NEW ;;
   }
 

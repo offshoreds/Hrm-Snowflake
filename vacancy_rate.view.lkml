@@ -2,6 +2,7 @@ view: vacancy_rate {
   sql_table_name: public.VACANCY_RATE ;;
 
   dimension: id {
+    hidden: yes
     primary_key: yes
     type: string
     sql: ${TABLE}.ID ;;
@@ -13,11 +14,13 @@ view: vacancy_rate {
   }
 
   dimension: employee_headcount {
+    hidden: yes
     type: string
     sql: ${TABLE}.EMPLOYEE_HEADCOUNT ;;
   }
 
   dimension: vacancy_rate {
+    hidden: yes
     type: string
     sql: ${TABLE}.VACANCY_RATE ;;
   }

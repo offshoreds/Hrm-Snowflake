@@ -2,6 +2,7 @@ view: expenses_by_day {
   sql_table_name: public.EXPENSES_BY_DAY ;;
 
   dimension: id {
+    hidden: yes
     primary_key: yes
     type: string
     sql: ${TABLE}.ID ;;

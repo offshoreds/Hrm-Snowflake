@@ -410,7 +410,7 @@
   - name: Top_Pay_Grades
     title: 'Top Pay Grades'
     type: looker_bar
-    model: Human_Resource_Management
+    model: hrm
     explore: salary_compression
     dimensions: [salary_compression.pay_grade_name]
     measures: [salary_compression.pay_yearly_amount_m]

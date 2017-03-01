@@ -2,11 +2,13 @@ view: top_spenders {
   sql_table_name: public.TOP_SPENDERS ;;
 
   dimension: category_spent {
+    hidden: yes
     type: string
     sql: ${TABLE}.CATEGORY_SPENT ;;
   }
 
   dimension: emp_id {
+    hidden: yes
     type: string
     sql: ${TABLE}.EMP_ID ;;
   }
@@ -17,23 +19,20 @@ view: top_spenders {
   }
 
   dimension: percent_of_total {
+    hidden: yes
     type: string
     sql: ${TABLE}.PERCENT_OF_TOTAL ;;
   }
 
   dimension: total_spent {
+    hidden: yes
     type: string
     sql: ${TABLE}.TOTAL_SPENT ;;
   }
 
   # measures
 
-  measure: percent_of_total_m {
-    type: sum
-    label: "Percent Of Total"
-    value_format: "0\%"
-    sql: ${percent_of_total}/100 ;;
-  }
+
 
   measure: total_spent_m {
     type: sum

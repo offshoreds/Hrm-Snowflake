@@ -2,16 +2,19 @@ view: salary_compression {
   sql_table_name: public.SALARY_COMPRESSION ;;
 
   dimension: avg_annual_basesal {
+    hidden: yes
     type: string
     sql: ${TABLE}.AVG_ANNUAL_BASESAL ;;
   }
 
   dimension: employee_headcount {
+    hidden: yes
     type: string
     sql: ${TABLE}.EMPLOYEE_HEADCOUNT ;;
   }
 
   dimension: median_annual_basesal {
+    hidden: yes
     type: string
     sql: ${TABLE}.MEDIAN_ANNUAL_BASESAL ;;
   }
@@ -22,27 +25,32 @@ view: salary_compression {
   }
 
   dimension: pay_yearly_amount {
+    hidden: yes
     type: string
     sql: ${TABLE}.PAY_YEARLY_AMOUNT ;;
   }
 
   dimension: percent_midpoint {
+    hidden: yes
     type: string
     sql: ${TABLE}.PERCENT_MIDPOINT ;;
   }
 
   dimension: high_salary {
     type: string
+    hidden: yes
     sql: ${TABLE}.HIGH_SALARY ;;
   }
 
   dimension: Training_Costs {
+    hidden: yes
     type: string
     sql: ${TABLE}.TRAINING_COST ;;
   }
 
   dimension: Cost_Recruitment {
     type: string
+    hidden: yes
     sql: ${TABLE}.COST_RECRUITMENT ;;
   }
 
@@ -111,7 +119,7 @@ view: salary_compression {
 
     link: {
       label: "Employee Expenses details"
-      url: "/dashboards/39"
+      url: "/dashboards/hrm::employee_expenses"
     }
   }
 

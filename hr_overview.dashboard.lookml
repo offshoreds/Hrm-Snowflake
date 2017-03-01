@@ -28,7 +28,7 @@
 
   - name: Workforce_Effectiveness
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: headcount
     measures: [headcount.Total_Emp, headcount.Total_Emp_2015]
     dynamic_fields:
@@ -79,7 +79,7 @@
 
   - name: Employee_Headcount
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: headcount
     measures: [headcount.Total_Emp, headcount.Total_Emp_2015]
     sorts: [headcount.Total_Emp desc]
@@ -122,7 +122,7 @@
 
   - name: Employees_Termination
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: headcount
     measures: [headcount.Total_Emp_termi, headcount.Total_Emp_2015_termi]
     sorts: [headcount.Total_Emp_termi desc]
@@ -166,7 +166,7 @@
   - name: Continget_Employees
     title: 'Continget Employees'
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: headcount
     measures: [headcount.Employees_Sum, headcount.Employees_m]
     sorts: [headcount.Employees_m desc]
@@ -210,7 +210,7 @@
 
   - name: Recruitment
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: headcount
     measures: [headcount.Total_Emp, headcount.Total_Emp_2015]
     dynamic_fields:
@@ -261,7 +261,7 @@
 
   - name: New_hires
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: new_hire_trend
     measures: [new_hire_trend.new_hires_ytd_m, new_hire_trend.new_hires_ytd_m_2015]
     sorts: [new_hire_trend.new_hires_ytd_m desc]
@@ -304,7 +304,7 @@
 
   - name: Total_FTE
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: headcount
     measures: [headcount.Contingent_emp, headcount.Contingent_emp_2015]
     sorts: [headcount.Contingent_emp desc]
@@ -348,7 +348,7 @@
 
   - name: Employees_Turnover
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: headcount
     measures: [headcount.Emp_Turnover, headcount.Emp_Turnover_2015]
     sorts: [headcount.Emp_Turnover desc]
@@ -393,7 +393,7 @@
 
   - name: Employee_Expenses
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: headcount
     measures: [headcount.Total_Emp, headcount.Total_Emp_2015]
     dynamic_fields:
@@ -491,7 +491,7 @@
 
   - name: Payroll_Expenses
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: payroll
     measures: [payroll.payroll, payroll.payroll_2015]
     filters:
@@ -541,7 +541,7 @@
 
   - name: Highest_Salary
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: salary_compression
     measures: [salary_compression.high_yearly_amount, salary_compression.lowest_yearly_amount_m]
     sorts: [salary_compression.high_yearly_amount desc]
@@ -594,7 +594,7 @@
   - name: Employee_Time_period
     title: 'Employee Headcount Over Time Period'
     type: looker_area
-    model: Human_Resource_Management
+    model: hrm
     explore: headcount
     dimensions: [headcount.Year, headcount.Quarter]
     measures: [headcount.Employees, headcount.Contingent_emp_m]

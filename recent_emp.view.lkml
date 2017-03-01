@@ -2,6 +2,7 @@ view: recent_emp {
   sql_table_name: public.RECENT_EMP ;;
 
   dimension: Total_amount_spent {
+    hidden: yes
     type: string
     sql: ${TABLE}.AMOUNT_SPENT ;;
   }
@@ -13,27 +14,32 @@ view: recent_emp {
   }
 
   dimension: emp_id {
+    hidden: yes
     type: string
     sql: ${TABLE}.EMP_ID ;;
   }
 
   dimension: emp_report_number {
+    hidden: yes
     type: string
     sql: ${TABLE}.EMP_REPORT_NUMBER ;;
   }
 
   dimension: report_status {
+    hidden: yes
     type: string
     sql: ${TABLE}.REPORT_STATUS ;;
   }
 
   dimension: spent_date {
+    hidden: yes
     type: string
     label: "Spent Date "
     sql: ${TABLE}.SPENT_DATE ;;
   }
 
   dimension: Total_Spent {
+    hidden: yes
     type: string
     sql: ${TABLE}.TOTAL_SPENT ;;
   }

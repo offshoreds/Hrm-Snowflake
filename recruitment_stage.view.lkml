@@ -2,11 +2,13 @@ view: recruitment_stage {
   sql_table_name: public.RECRUITMENT_STAGE ;;
 
   dimension: application_start {
+    hidden: yes
     type: string
     sql: ${TABLE}.APPLICATION_START ;;
   }
 
   dimension: offer_extended {
+    hidden: yes
     type: string
     sql: ${TABLE}.OFFER_EXTENDED ;;
   }
@@ -17,16 +19,19 @@ view: recruitment_stage {
   }
 
   dimension: requisition_approved {
+    hidden: yes
     type: string
     sql: ${TABLE}.REQUISITION_APPROVED ;;
   }
 
   dimension: timetofill {
+    hidden: yes
     type: string
     sql: ${TABLE}.TIMETOFILL ;;
   }
 
   dimension: timetohire {
+    hidden: yes
     type: string
     sql: ${TABLE}.TIMETOHIRE ;;
   }
@@ -65,12 +70,7 @@ view: recruitment_stage {
     sql: ${timetofill} ;;
   }
 
-  measure: timetohire_m {
-    label: "Time To Hire"
-    type: sum
-    value_format: "0"
-    sql: ${timetohire}/20 ;;
-  }
+
 
   measure: count {
     type: count

@@ -7,6 +7,7 @@ view: open_requisition {
   }
 
   dimension: requisitions {
+    hidden: yes
     type: string
     sql: ${TABLE}.REQUISITIONS ;;
   }
@@ -19,7 +20,7 @@ view: open_requisition {
   # measures
 
   measure: requisitions_m {
-    label: "Open requisitions"
+    label: "Open Requisitions"
     type: sum
     sql: ${requisitions} ;;
   }

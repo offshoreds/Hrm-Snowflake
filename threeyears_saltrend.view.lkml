@@ -2,16 +2,19 @@ view: threeyears_saltrend {
   sql_table_name: public.THREEYEARS_SALTREND ;;
 
   dimension: average_annual_base_salary {
+    hidden: yes
     type: string
     sql: ${TABLE}.AVERAGE_ANNUAL_BASE_SALARY ;;
   }
 
   dimension: employee_head_count {
+    hidden: yes
     type: string
     sql: ${TABLE}.EMPLOYEE_HEAD_COUNT ;;
   }
 
   dimension: total_annual_base_salary {
+    hidden: yes
     type: string
     sql: ${TABLE}.TOTAL_ANNUAL_BASE_SALARY ;;
   }
@@ -27,16 +30,12 @@ view: threeyears_saltrend {
   }
 
   dimension: total_base_salary {
+    hidden: yes
     type: string
     sql: ${TABLE}.total_base_salary ;;
   }
 
-  # measures
-  # - measure: average_annual_base_salary_m
-  #    type: avg
-  #    value_format: '$0.##,, " M"'
-  #    label: 'Average Annual Base Salary'
-  #    sql: ${total_annual_base_salary}/10
+
 
   measure: employee_head_count_m {
     label: "Employee Headcount"

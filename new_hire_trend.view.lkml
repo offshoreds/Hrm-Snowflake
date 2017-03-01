@@ -7,6 +7,7 @@ view: new_hire_trend {
   }
 
   dimension: new_hires_ytd {
+    hidden: yes
     type: string
     sql: ${TABLE}.NEW_HIRES_YTD ;;
   }
@@ -16,13 +17,12 @@ view: new_hire_trend {
     sql: ${TABLE}.YEAR ;;
   }
 
-  # measures
-
-
   dimension: quarter {
     type: string
     sql: ${TABLE}.QUARTER ;;
   }
+
+  # measures
 
   measure: new_hires_ytd_m {
     label: "New Hires"
@@ -31,7 +31,7 @@ view: new_hire_trend {
 
     link: {
       label: "Recruitment Details"
-      url: "/dashboards/40"
+      url: "/dashboards/hrm::recruitment"
     }
   }
 

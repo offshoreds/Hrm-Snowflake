@@ -2,6 +2,7 @@ view: expenses_by_time_period {
   sql_table_name: public.EXPENSES_BY_TIME_PERIOD ;;
 
   dimension: amount_spent {
+    hidden: yes
     type: string
     sql: ${TABLE}.AMOUNT_SPENT ;;
   }
@@ -30,17 +31,12 @@ view: expenses_by_time_period {
     sql: ${amount_spent} ;;
 
     link: {
-      label: "Employee Expenses details"
+      label: "Employee Expenses Details"
       url: "/dashboards/39"
     }
   }
 
-  measure: amount_spent_mm {
-    type: sum
-    label: "Amount Spent"
-    value_format: "$#,###"
-    sql: ${amount_spent}/10 ;;
-  }
+
 
   measure: amount_spent_m_2015 {
     type: sum

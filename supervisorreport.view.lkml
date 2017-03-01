@@ -3,11 +3,13 @@ view: supervisorreport {
 
   dimension: Id {
     primary_key: yes
+    hidden: yes
     type: string
     sql: ${TABLE}.ID ;;
   }
 
   dimension: Avg_emp {
+    hidden: yes
     type: string
     sql: ${TABLE}.AVG_EMP ;;
   }
@@ -18,11 +20,13 @@ view: supervisorreport {
   }
 
   dimension: Employee {
+    hidden: yes
     type: string
     sql: ${TABLE}.EMPLOYEE ;;
   }
 
   dimension: Supervisor {
+    hidden: yes
     type: string
     sql: ${TABLE}.SUPERVISOR ;;
   }
@@ -37,7 +41,7 @@ view: supervisorreport {
 
   measure: Count {
     type: count
-#    drill_fields: [id]
+
   }
 
   measure: Emp_count {

@@ -2,47 +2,56 @@ view: headcount {
   sql_table_name: PUBLIC.HEADCOUNT ;;
 
   dimension: Id {
+    hidden: yes
     primary_key: yes
     type: string
     sql: ${TABLE}.ID ;;
   }
 
   dimension: Contingent_head_count {
+    hidden: yes
     type: string
     sql: ${TABLE}.CONTINGENT_HEAD_COUNT ;;
   }
 
   dimension: Total_Head_Count {
+    hidden: yes
     type: string
     sql: ${TABLE}.TOTAL_HEAD_COUNT ;;
   }
 
   dimension: turnover_percent {
+    hidden: yes
     type: string
     sql: ${TABLE}.turnover_percent ;;
   }
 
   dimension: INVOL_TERM {
+    hidden: yes
     type: string
     sql: ${TABLE}.INVOL_TERM ;;
   }
 
   dimension: VOL_TERM {
+    hidden: yes
     type: string
     sql: ${TABLE}.VOL_TERM ;;
   }
 
   dimension: I_TERM {
+    hidden: yes
     type: string
     sql: ${TABLE}.I_TERM ;;
   }
 
   dimension: V_TERM {
+    hidden: yes
     type: string
     sql: ${TABLE}.V_TERM ;;
   }
 
   dimension: TERMINATION {
+    hidden: yes
     type: string
     sql: ${TABLE}.TERMINATION ;;
   }
@@ -53,11 +62,13 @@ view: headcount {
   }
 
   dimension: Emp_headcount {
+    hidden: yes
     type: string
     sql: ${TABLE}.EMP_HEADCOUNT ;;
   }
 
   dimension: Turnover {
+    hidden: yes
     type: string
     sql: ${TABLE}.TURNOVER ;;
   }
@@ -92,7 +103,7 @@ view: headcount {
 
     link: {
       label: "Workforce Effectiveness Details"
-      url: "/dashboards/41"
+      url: "/dashboards/hrm::workforce_effectiveness"
     }
   }
 
@@ -139,28 +150,8 @@ view: headcount {
       field: Quarter
       value: "Q4"
     }
-
-    ##  - measure: retirement_emp
-    ##  label: ' Current year Retirement Employees'
-    ##  type: sum
-    ##  value_format: '#,##0'
-    ##   sql: ${Contingent_head_count}/100
-    ##   filters:
-    ##      Year: '2016'
-    #X# Expected a list for: links
   }
 
-  ##   - label: Workforce Effectiveness Details
-  ##     url: /dashboards/41
-
-
-  #  - measure: Retirement_emp_2015
-  #   label: ' Previous year Retirement Employees'
-  #  type: sum
-  # value_format: '#,##0'
-  # sql: ${Contingent_head_count}/100
-  #  filters:
-  #     Year: '2015'
 
   measure: Employees {
     label: "Contingent Employees"
@@ -192,7 +183,7 @@ view: headcount {
 
     link: {
       label: "Workforce Effectiveness Details"
-      url: "/dashboards/41"
+      url: "/dashboards/hrm::workforce_effectiveness"
     }
   }
   measure: Employees_Sum_nl {
@@ -249,7 +240,7 @@ view: headcount {
 
     link: {
       label: "Recruitment Details"
-      url: "/dashboards/40"
+      url: "/dashboards/hrm::recruitment"
     }
   }
 
@@ -273,7 +264,7 @@ view: headcount {
   measure: count {
     hidden: yes
     type: count
-    #drill_fields: [id, department_name]
+
   }
 
   measure: Total_Emp_2015 {
@@ -311,7 +302,7 @@ view: headcount {
 
     link: {
       label: "Workforce Effectiveness Details"
-      url: "/dashboards/41"
+      url: "/dashboards/hrm::workforce_effectiveness"
     }
   }
 
@@ -340,7 +331,7 @@ view: headcount {
 
     link: {
       label: "Recruitment Details"
-      url: "/dashboards/40"
+      url: "/dashboards/hrm::recruitment"
     }
   }
 
@@ -367,24 +358,6 @@ view: headcount {
       value: "2014,2015,2016"
     }
   }
-
-  #  - measure: vacancy_rate
-  #   label: 'Vacancy Rate'
-  #  type: sum
-  #  value_format: '#.00%'
-  # sql: (${Contingent_head_count}+${Emp_headcount}-${Contingent_head_count}/2+${Emp_headcount}/500)/1000000
-  #filters:
-  #   Year: '2014,2015,2016'
-
-
-
-  #  - measure: vacancy_rate_2015
-  #    label: 'Vacancy Rate 2015'
-  #    type: sum
-  #    value_format: '#.00%'
-  #    sql: (${Contingent_head_count}+${Emp_headcount}-${Contingent_head_count}/2+${Emp_headcount}/500)/1000000
-  #    filters:
-  #        Year: '2015'
 
 
   measure: Total_Emp_2015_termi {

@@ -2,46 +2,55 @@ view: recruitment_events {
   sql_table_name: public.RECRUITMENT_EVENTS ;;
 
   dimension: application_hire_ratio {
+    hidden: yes
     type: string
     sql: ${TABLE}.APPLICATION_HIRE_RATIO ;;
   }
 
   dimension: application_starts {
+    hidden: yes
     type: string
     sql: ${TABLE}.APPLICATION_STARTS ;;
   }
 
   dimension: assessment_interviews {
+    hidden: yes
     type: string
     sql: ${TABLE}.ASSESSMENT_INTERVIEWS ;;
   }
 
   dimension: avg_time_to_fill_days {
+    hidden: yes
     type: string
     sql: ${TABLE}.AVG_TIME_TO_FILL_DAYS ;;
   }
 
   dimension: hires {
+    hidden: yes
     type: string
     sql: ${TABLE}.HIRES ;;
   }
 
   dimension: offer_acceptance_rate {
+    hidden: yes
     type: string
     sql: ${TABLE}.OFFER_ACCEPTANCE_RATE ;;
   }
 
   dimension: offers_accepted {
+    hidden: yes
     type: string
     sql: ${TABLE}.OFFERS_ACCEPTED ;;
   }
 
   dimension: offers_extended {
+    hidden: yes
     type: string
     sql: ${TABLE}.OFFERS_EXTENDED ;;
   }
 
   dimension: offers_rejected {
+    hidden: yes
     type: string
     sql: ${TABLE}.OFFERS_REJECTED ;;
   }

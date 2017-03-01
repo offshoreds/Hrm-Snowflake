@@ -8,6 +8,7 @@ view: new_hire_view {
   }
 
   dimension: hires {
+    hidden: yes
     type: string
     sql: ${TABLE}.HIRES ;;
   }

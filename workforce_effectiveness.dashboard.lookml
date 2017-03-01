@@ -24,7 +24,7 @@
     title: 'Employees HeadCount'
     type: single_value
     explore: headcount
-    model: Human_Resource_Management
+    model: hrm
     measures: [headcount.Contingent_emp_nl]
     sorts: [headcount.Contingent_emp_nl desc]
     limit: '500'
@@ -69,7 +69,7 @@
   - name: Contingent_Employees_HeadCount
     title: '# Contingent Employees'
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: headcount
     measures: [headcount.Employees_Sum_nl]
     sorts: [headcount.Employees_Sum_nl desc]
@@ -120,7 +120,7 @@
   - name: Supervisors
     title: '# Supervisors'
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: supervisorreport
     measures: [supervisorreport.Supervisor_count]
     sorts: [supervisorreport.Supervisor_count desc]
@@ -166,7 +166,7 @@
   - name: Employee_Vs_SUpervisor
     title: 'Supervisor Span of Control'
     type: looker_column
-    model: Human_Resource_Management
+    model: hrm
     explore: supervisorreport
     dimensions: [supervisorreport.Department]
     measures: [supervisorreport.Supervisor_count, supervisorreport.Emp_count]
@@ -220,7 +220,7 @@
   - name: Employees_trend
     title: 'Employees Trend'
     type: looker_column
-    model: Human_Resource_Management
+    model: hrm
     explore: headcount
     dimensions: [headcount.Year, headcount.Quarter]
     measures: [headcount.Contingent_emp_m, headcount.Employees, headcount.Total_Emp_termi_voluntary,
@@ -279,7 +279,7 @@
   - name: Voluntary_Termination
     title: '# Voluntary Termination'
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: employees_trend
     measures: [employees_trend.voluntery_employees]
     sorts: [employees_trend.voluntery_employees desc]
@@ -322,7 +322,7 @@
   - name: Involuntary_Termination
     title: '# Involuntary Termination'
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: employees_trend
     measures: [employees_trend.involuntary_termination_count]
     sorts: [employees_trend.involuntary_termination_count desc]
@@ -364,7 +364,7 @@
   - name: Employees_By_Department
     title: 'Employees By Department'
     type: looker_column
-    model: Human_Resource_Management
+    model: hrm
     explore: headcount
     dimensions: [headcount.Department_name]
     measures: [headcount.Employees, headcount.Contingent_emp_m]
@@ -404,7 +404,7 @@
   - name: Employee_Trending
     title: 'Employees Trending'
     type: looker_line
-    model: Human_Resource_Management
+    model: hrm
     explore: headcount
     dimensions: [headcount.Year, headcount.Quarter]
     measures: [headcount.Employees, headcount.Contingent_emp_m]

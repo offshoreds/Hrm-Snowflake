@@ -12,6 +12,7 @@ view: top5_vacancies {
   }
 
   dimension: Top_Openings {
+    hidden: yes
     type: string
     sql: ${TABLE}.TOP_OPENINGS ;;
   }

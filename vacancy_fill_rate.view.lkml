@@ -2,6 +2,7 @@ view: vacancy_fill_rate {
   sql_table_name: public.VACANCY_FILL_RATE ;;
 
   dimension: id {
+    hidden: yes
     primary_key: yes
     type: string
     sql: ${TABLE}.ID ;;
@@ -13,21 +14,25 @@ view: vacancy_fill_rate {
   }
 
   dimension: job_requisition_period {
+    hidden: yes
     type: string
     sql: ${TABLE}.JOB_REQUISITION_PERIOD ;;
   }
 
   dimension: job_requisitions_opened {
+    hidden: yes
     type: string
     sql: ${TABLE}.JOB_REQUISITIONS_OPENED ;;
   }
 
   dimension: total_open_requisitions {
+    hidden: yes
     type: string
     sql: ${TABLE}.TOTAL_OPEN_REQUISITIONS ;;
   }
 
   dimension: vacancy_fill_rate {
+    hidden: yes
     type: string
     sql: ${TABLE}.VACANCY_FILL_RATE ;;
   }

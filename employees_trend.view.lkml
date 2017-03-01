@@ -7,6 +7,7 @@ view: employees_trend {
   }
 
   dimension: involuntary_termination {
+    hidden: yes
     type: number
     sql: ${TABLE}.INVOLUNTARY_TERMINATION ;;
   }
@@ -17,8 +18,21 @@ view: employees_trend {
   }
 
   dimension: voluntery {
+    hidden: yes
     type: number
     sql: ${TABLE}.VOLUNTERY ;;
+  }
+
+  dimension: vol {
+    hidden: yes
+    type: number
+    sql: ${TABLE}.VOL ;;
+  }
+
+  dimension: invol {
+    hidden: yes
+    type: number
+    sql: ${TABLE}.invol ;;
   }
 
   dimension: year {
@@ -45,15 +59,10 @@ view: employees_trend {
     }
   }
 
-  measure: employees_count {
-    label: "Employees"
-    value_format: "0"
-    type: sum
-    sql: ${employees}/10 ;;
-  }
+
 
   measure: involuntary_termination_count {
-    label: "involuntary Termination"
+    label: "Involuntary Termination"
     type: sum
     value_format: "#,##0"
     sql: ${involuntary_termination} ;;
@@ -74,22 +83,5 @@ view: employees_trend {
     drill_fields: []
   }
 
-  measure: Employees_Termination {
-    label: "Employees Termination"
-    type: sum
-    value_format: "#,##0"
-    sql: ${voluntery}*10 + ${involuntary_termination}*10 ;;
-  }
 
-  measure: Employees_Termination_2015 {
-    label: "Employees Termination 2015"
-    type: sum
-    value_format: "#,##0"
-    sql: ${voluntery}*10 + ${involuntary_termination}*10 ;;
-
-    filters: {
-      field: year
-      value: "2015"
-    }
-  }
 }

@@ -7,6 +7,7 @@ view: expenses_category {
   }
 
   dimension: expense_amount {
+    hidden: yes
     type: string
     sql: ${TABLE}.EXPENSE_AMOUNT ;;
   }

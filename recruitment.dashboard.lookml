@@ -20,7 +20,7 @@
 
   - name: New_Hires
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: new_hire_trend
     measures: [new_hire_trend.new_hires_ytd_m_nl]
     sorts: [new_hire_trend.new_hires_ytd_m_nl desc]
@@ -69,7 +69,7 @@
 
   - name: Job_Openings
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: requisition_events
     measures: [requisition_events.Job_openings]
     filters:
@@ -113,7 +113,7 @@
 
   - name: Job_requisition
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: requisition_events
     measures: [requisition_events.Job_requisition_opening]
     filters:
@@ -167,7 +167,7 @@
 
   - name: Offers_Accepted
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: recruitment_events
     measures: [recruitment_events.offers_accepted_m]
     sorts: [recruitment_events.offers_accepted_m desc]
@@ -211,7 +211,7 @@
 
   - name: Offers_Rejected
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: recruitment_events
     measures: [recruitment_events.offers_rejected_m]
     sorts: [recruitment_events.offers_rejected_m desc]
@@ -256,7 +256,7 @@
   - name: Open_requisition_Overview
     title: 'Top 5 Job Requisitions By Country'
     type: looker_pie
-    model: Human_Resource_Management
+    model: hrm
     explore: open_requisition
     dimensions: [open_requisition.country]
     measures: [open_requisition.requisitions_m]
@@ -300,7 +300,7 @@
   - name: Top_5_Vacancies
     title:  'Top 5 Vacancies'
     type: looker_bar
-    model: Human_Resource_Management
+    model: hrm
     explore: top5_vacancies
     dimensions: [top5_vacancies.country_states]
     measures: [top5_vacancies.openings_m]
@@ -339,7 +339,7 @@
   - name: Recruitment_Stage
     title: 'Recruitment Stage'
     type: looker_column
-    model: Human_Resource_Management
+    model: hrm
     explore: recruitment_stage
     dimensions: [recruitment_stage.year, recruitment_stage.quarter]
     measures: [recruitment_stage.requisition_approved_m, recruitment_stage.application_start_m,
@@ -385,7 +385,7 @@
   - name: New_Hire_source
     title: 'New Hires By Source'
     type: looker_bar
-    model: Human_Resource_Management
+    model: hrm
     explore: new_hire_source
     dimensions: [new_hire_source.source]
     measures: [new_hire_source.Employee_Hires_m]
@@ -424,7 +424,7 @@
   - name: Vacancies_By_Departmemt
     title: 'Vacancies By Departmemt'
     type: looker_line
-    model: Human_Resource_Management
+    model: hrm
     explore: vacancy_rate
     dimensions: [vacancy_rate.department_name]
     measures: [vacancy_rate.employee_headcount_m]
