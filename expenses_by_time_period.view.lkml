@@ -32,7 +32,7 @@ view: expenses_by_time_period {
 
     link: {
       label: "Employee Expenses Details"
-      url: "/dashboards/39"
+      url: "/dashboards/hrm::employee_expenses"
     }
   }
 

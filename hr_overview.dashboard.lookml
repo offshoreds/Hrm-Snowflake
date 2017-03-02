@@ -443,7 +443,7 @@
 
   - name: Total_Expenses
     type: single_value
-    model: Human_Resource_Management
+    model: hrm
     explore: expenses_by_time_period
     measures: [expenses_by_time_period.amount_spent_m, expenses_by_time_period.amount_spent_m_2015]
     filters:
