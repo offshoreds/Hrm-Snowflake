@@ -63,7 +63,7 @@
     label_type: labPer
     font_size: 12
     series_types: {}
-    single_value_title: New Hires
+    single_value_title: New Hires YTD
 
 
 

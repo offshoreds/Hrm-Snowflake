@@ -89,7 +89,7 @@ view: headcount {
     label: " Permanent Employees."
     type: sum
     value_format: "#,##0"
-    sql: ${Emp_headcount} ;;
+    sql: round(${Emp_headcount}/100) ;;
 
     filters: {
       field: Year
@@ -112,7 +112,7 @@ view: headcount {
     type: sum
 
     value_format: "#,##0"
-    sql: ${Emp_headcount} ;;
+    sql: round(${Emp_headcount}/100) ;;
 
     filters: {
       field: Year
@@ -139,7 +139,7 @@ view: headcount {
     label: "Previous Year Permanent Employees "
     type: sum
     value_format: "#,##0"
-    sql: ${Emp_headcount} ;;
+    sql: round(${Emp_headcount}/100) ;;
 
     filters: {
       field: Year
@@ -169,7 +169,7 @@ view: headcount {
     label: "Contingent Employees."
     type: sum
     value_format: "#,##0"
-    sql: ${Contingent_head_count} ;;
+    sql: round(${Contingent_head_count}/100) ;;
 
     filters: {
       field: Year
@@ -190,7 +190,7 @@ view: headcount {
     label: "Contingent Employees."
     type: sum
     value_format: "#,##0"
-    sql: ${Contingent_head_count} ;;
+    sql:round( ${Contingent_head_count}/100) ;;
 
     filters: {
       field: Year
@@ -209,7 +209,7 @@ view: headcount {
     label: "Previous Year Contingent Employees"
     type: sum
     value_format: "#,##0"
-    sql: ${Contingent_head_count} ;;
+    sql: round(${Contingent_head_count}/100) ;;
 
     filters: {
       field: Year
@@ -271,7 +271,7 @@ view: headcount {
     label: "Previous Year Employees"
     type: sum
     value_format: "#,##0"
-    sql: ${Total_Head_Count} ;;
+    sql: round( ${Total_Head_Count}/100) ;;
 
     filters: {
       field: Year
@@ -288,7 +288,7 @@ view: headcount {
     label: "Current Employees"
     type: sum
     value_format: "#,##0"
-    sql: ${Total_Head_Count} ;;
+    sql: round( ${Total_Head_Count}/100) ;;
 
     filters: {
       field: Year
@@ -322,7 +322,7 @@ view: headcount {
     label: "Employees Termination"
     type: sum
     value_format: "#,##0"
-    sql: ${TERMINATION} ;;
+    sql: round(${TERMINATION}/100) ;;
 
     filters: {
       field: Year
@@ -364,7 +364,7 @@ view: headcount {
     label: "Previous Year Employees Termination "
     type: sum
     value_format: "#,##0"
-    sql: ${TERMINATION} ;;
+    sql: round(${TERMINATION}/100) ;;
 
     filters: {
       field: Year

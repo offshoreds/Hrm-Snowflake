@@ -91,8 +91,8 @@ view: salary_compression {
   measure: Training_Cost {
     type: sum
     label: "Training Cost Per FTE"
-    value_format: "$#,##0"
-    sql: ${Training_Costs} ;;
+    value_format: "$#,###"
+    sql: round(${Training_Costs}/10) ;;
 
 
   }
@@ -101,7 +101,7 @@ view: salary_compression {
     type: sum
     label: "Cost Per Recruitment"
     value_format: "$#,##0"
-    sql: ${Cost_Recruitment} ;;
+    sql: round(${Cost_Recruitment}/100) ;;
 
 
   }

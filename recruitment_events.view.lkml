@@ -96,7 +96,7 @@ view: recruitment_events {
   measure: offers_accepted_m {
     type: sum
     label: "Offers Accepted"
-    sql: ${offers_accepted} ;;
+    sql:round( ${offers_accepted}/100) ;;
   }
 
   measure: offers_extended_m {
@@ -108,7 +108,7 @@ view: recruitment_events {
   measure: offers_rejected_m {
     type: sum
     label: "Offers Rejected"
-    sql: ${offers_rejected} ;;
+    sql: round( ${offers_rejected}/10) ;;
   }
 
   measure: count {

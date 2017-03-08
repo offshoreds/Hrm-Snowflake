@@ -45,9 +45,9 @@ view: threeyears_saltrend {
 
   measure: total_annual_base_salary_m {
     type: sum
-    value_format: "$0.##,, \" M\""
+    value_format: "$0,, \" M\""
     label: "Total Annual Base Salary"
-    sql: ${total_base_salary} ;;
+    sql: round(${total_base_salary}/10) ;;
 
 
   }

@@ -27,7 +27,7 @@ view: new_hire_trend {
   measure: new_hires_ytd_m {
     label: "New Hires"
     type: sum
-    sql: ${new_hires_ytd} ;;
+    sql: round(${new_hires_ytd}/100) ;;
 
     link: {
       label: "Recruitment Details"
@@ -37,10 +37,10 @@ view: new_hire_trend {
 
 
   measure: new_hires_ytd_m_nl {
-    label: "New Hires"
+    label: "New Hires YTD"
     type: sum
 
-    sql: ${new_hires_ytd} ;;
+    sql: round(${new_hires_ytd} /10);;
 
 
   }
@@ -48,7 +48,7 @@ view: new_hire_trend {
   measure: new_hires_ytd_m_2015 {
     label: "New Hires 2015"
     type: sum
-    sql: ${new_hires_ytd} ;;
+    sql: round(${new_hires_ytd}/100) ;;
 
     filters: {
       field: year

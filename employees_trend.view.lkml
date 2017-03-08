@@ -46,7 +46,7 @@ view: employees_trend {
     label: "Voluntary Termination"
     type: sum
     value_format: "#,##0"
-    sql: ${voluntery} ;;
+    sql: round(${voluntery}/100) ;;
 
     filters: {
       field: year
@@ -65,7 +65,7 @@ view: employees_trend {
     label: "Involuntary Termination"
     type: sum
     value_format: "#,##0"
-    sql: ${involuntary_termination} ;;
+    sql: round(${involuntary_termination}/10) ;;
 
     filters: {
       field: year

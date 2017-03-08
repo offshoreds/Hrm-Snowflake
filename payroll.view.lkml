@@ -46,9 +46,9 @@ view: payroll {
 
   measure: payroll_2015 {
     label: "Payroll Expenses 2015"
-    value_format: "$0.##,, \" M\""
+    value_format: "$0,, \" M\""
     type: sum
-    sql: ${Previous_Payroll} ;;
+    sql: round(${Previous_Payroll}/10) ;;
 
     filters: {
       field: year
@@ -58,9 +58,9 @@ view: payroll {
 
   measure: payroll {
     label: "Payroll Expenses"
-    value_format: "$0.##,, \" M\""
+    value_format: "$0,, \" M\""
     type: sum
-    sql: ${Total_Payroll} ;;
+    sql: round(${Total_Payroll}/10) ;;
 
     link: {
       label: "Employee Expenses details"

@@ -55,7 +55,7 @@ view: supervisorreport {
     label: "Supervisors"
     value_format: "#,##0"
     type: sum
-    sql: ${Supervisor} ;;
+    sql: round(${Supervisor}/100) ;;
 
     filters: {
       field: Year

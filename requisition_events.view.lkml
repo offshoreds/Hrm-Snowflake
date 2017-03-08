@@ -23,13 +23,13 @@ view: requisition_events {
   measure: Job_openings {
     type: sum
     value_format: "#,##0"
-    sql: ${Openings} ;;
+    sql:round( ${Openings}/100) ;;
   }
 
   measure: Job_requisition_opening {
     type: sum
     value_format: "#,##0"
-    sql: ${Requisition_opening} ;;
+    sql:round( ${Requisition_opening}/10) ;;
   }
 
 
