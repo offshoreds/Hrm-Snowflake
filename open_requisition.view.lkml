@@ -22,7 +22,7 @@ view: open_requisition {
   measure: requisitions_m {
     label: "Open Requisitions"
     type: sum
-    sql: ${requisitions} ;;
+    sql: round(${requisitions}/100) ;;
   }
 
   measure: count {

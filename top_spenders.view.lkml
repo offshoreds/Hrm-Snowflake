@@ -38,7 +38,7 @@ view: top_spenders {
     type: sum
     label: "Total Amount Spent"
     value_format: "$#,##0"
-    sql: ${total_spent} ;;
+    sql: round(${total_spent}/100) ;;
   }
 
   measure: count {

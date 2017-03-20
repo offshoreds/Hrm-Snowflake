@@ -28,7 +28,7 @@ view: new_hire_source {
     label: "New Hires"
     value_format: "#,##0"
     type: sum
-    sql: ${hires} ;;
+    sql: round(${hires}/100) ;;
   }
 
   measure: count {

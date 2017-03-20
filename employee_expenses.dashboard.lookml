@@ -1,4 +1,5 @@
 - dashboard: employee_expenses
+  hidden: yes
   title: HR-Employee Expenses
   layout: grid
   rows:

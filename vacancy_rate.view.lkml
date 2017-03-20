@@ -36,7 +36,7 @@ view: vacancy_rate {
     type: sum
     label: "Employee Headcount"
     value_format: "#,###"
-    sql: ${employee_headcount} ;;
+    sql:round( ${employee_headcount}/100) ;;
   }
 
   measure: vacancy_rate_m {

@@ -47,21 +47,21 @@ view: recruitment_stage {
     label: "Application Start"
     type: sum
     value_format: "#,###"
-    sql: ${application_start} ;;
+    sql: round(${application_start}/100) ;;
   }
 
   measure: offer_extended_m {
     label: "Offer Extended"
     value_format: "#,###"
     type: sum
-    sql: ${offer_extended} ;;
+    sql:round( ${offer_extended}/100) ;;
   }
 
   measure: requisition_approved_m {
     label: "Requisition Approved"
     type: sum
     value_format: "#,###"
-    sql: ${requisition_approved} ;;
+    sql:round( ${requisition_approved}/100) ;;
   }
 
   measure: timetofill_m {

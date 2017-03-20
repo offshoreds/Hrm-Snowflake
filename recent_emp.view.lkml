@@ -50,7 +50,7 @@ view: recent_emp {
     type: sum
     label: "Amount Spent"
     value_format: "$#,##0"
-    sql: ${Total_Spent} ;;
+    sql: round(${Total_Spent}/100) ;;
   }
 
   measure: count {

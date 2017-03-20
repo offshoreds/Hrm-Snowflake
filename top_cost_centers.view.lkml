@@ -37,7 +37,7 @@ view: top_cost_centers {
     label: "Total Expenses"
     type: sum
     value_format: "$#,##0"
-    sql: ${total_expenses_new} ;;
+    sql: round(${total_expenses_new}/100) ;;
   }
 
   measure: total_expenses_year_ago_m {

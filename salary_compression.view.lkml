@@ -85,7 +85,7 @@ view: salary_compression {
     type: sum
     label: "Pay Yearly Amount"
     value_format: "$#,##0"
-    sql: ${Pay_Amount_Y} ;;
+    sql:round( ${Pay_Amount_Y}/100) ;;
   }
 
   measure: Training_Cost {

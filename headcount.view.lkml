@@ -132,7 +132,7 @@ view: headcount {
     label: "Permanent Employees"
     type: sum
     value_format: "#,##0"
-    sql: ${Emp_headcount} ;;
+    sql:round( ${Emp_headcount}/100) ;;
   }
 
   measure: Contingent_emp_2015 {
@@ -157,7 +157,7 @@ view: headcount {
     label: "Contingent Employees"
     type: sum
     value_format: "#,##0"
-    sql: ${Contingent_head_count} ;;
+    sql: round(${Contingent_head_count}/100) ;;
 
     filters: {
       field: Year
@@ -339,7 +339,7 @@ view: headcount {
     label: "Voluntary Employees Termination"
     type: sum
     value_format: "#,##0"
-    sql: ${V_TERM} ;;
+    sql:round( ${V_TERM}/100) ;;
 
     filters: {
       field: Year

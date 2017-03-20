@@ -24,7 +24,7 @@ view: top5_vacancies {
     label: "Openings"
     type: sum
     value_format: "#,###"
-    sql: ${Top_Openings} ;;
+    sql: round(${Top_Openings}/100) ;;
   }
 
   measure: count {

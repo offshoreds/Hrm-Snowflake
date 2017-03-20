@@ -48,7 +48,7 @@ view: supervisorreport {
     label: "Employees"
     value_format: "#,##0"
     type: sum
-    sql: ${Employee} ;;
+    sql: round(${Employee}/100) ;;
   }
 
   measure: Supervisor_count {

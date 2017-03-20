@@ -63,7 +63,7 @@ view: expenses_by_day {
     type: sum
     label: "Expenses"
     value_format: "$#,##0"
-    sql: ${New_Expenses} ;;
+    sql: round(${New_Expenses}/100) ;;
   }
 
   measure: reports_submitted_m {
