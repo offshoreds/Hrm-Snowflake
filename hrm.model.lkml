@@ -4,7 +4,7 @@ connection: "snowflake_hrm"
 include: "*.view"
 
 # include all the dashboards
-#include: "*.dashboard"
+include: "*.dashboard"
 
 label: "HRM"
 
